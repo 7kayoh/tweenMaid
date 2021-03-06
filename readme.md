@@ -5,7 +5,6 @@ A dual-context sided system to assist you with handling replicated tween without
 ## Requirements
 * Know how to code (obviously)
 * Roblox Studio
-* A `RemoteEvent` called `tweenEvent` in `ReplicatedStorage`
 
 ## Setup
 
@@ -17,8 +16,6 @@ You can create a tween request by calling the function `registerTweening` in `se
 ```lua
 registerTweening(workspace.Baseplate, {4, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut}, {Size = Vector3.new(25, 25, 25)})
 ```
-
-> For some reason, TweenInfo **can not** be passed to the client in a RemoteEvent (which is a bit dumb in my opinion). Hence, you need to return a table of the TweenInfo configuration, basically a TweenInfo without the `TweenInfo.new` but wrapped in a table.
 
 ## License
 
